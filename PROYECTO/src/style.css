@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "JackPirate";
+    src: url("../styles/font/JackPirate_PERSONAL_USE_ONLY.ttf") format("truetype");
+}
+
+/* ===== BODY / FONDO MAR ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: jackPirate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(
+        to bottom,
+        #1e81b0 0%,
+        #145da0 40%,
+        #0c2d48 100%
+    );
+
+    color: #fff;
+    overflow: hidden;
+}
+
+body, h1, p, label {
+    color: yellow;
+}
+
+/* ===== TÍTULO ===== */
+h1 {
+    font-family: "JackPirate", serif;
+    font-size: 2.8rem;
+    margin: 16px 0;
+    letter-spacing: 2px;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+#main {
+    display: grid;
+    grid-template-columns: auto 140px; /* izquierda tablero | derecha dado */
+    grid-auto-rows: auto;
+    column-gap: 30px;
+    align-items: start;
+}
+
+/* ===== TEXTO DEL HÉROE (arriba) ===== */
+.p-heroe {
+    grid-column: 1 / -1;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* ===== TABLERO (izquierda) ===== */
+table {
+    grid-column: 1;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td.arena {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ===== HEROE Y COFRE ===== */
+#heroe {
+    width: 50px;
+    height: 50px;
+}
+
+#cofreCerrado {
+    width: 50px;
+    height: 50px;
+}
+
+/* ===== DADO (derecha) ===== */
+#dado {
+    grid-column: 2;
+    grid-row: auto;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+    justify-self: center;
+}
+
+/* ===== BOTÓN JUGAR (debajo del dado) ===== */
+#jugar {
+    grid-column: 2;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f4d03f;
+    justify-self: center;
+}
+
+#jugar:hover {
+    background-color: #f1c40f;
+}
